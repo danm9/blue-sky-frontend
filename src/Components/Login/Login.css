@@ -1,0 +1,181 @@
+@media all and (min-width: 480px) { 
+
+
+  /*set div after "<BrowserView>" to this id*/
+  #bckgrnd {
+    background-image: linear-gradient(to bottom, #007bc2, #e6f2ff);
+    min-height: 100vh;
+    min-width: 100%;
+  }
+
+  .clouds {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    max-height: 3000px;
+    background: url("../Images/clouds.png");
+    animation: animate 60s linear infinite;
+  }
+  @keyframes animate
+  {
+    0%
+    {
+      background-position: 0px;
+    }
+    100%
+    {
+      background-position: -3094px;
+    }
+  }
+
+
+  .wrapper {
+    position: relative;
+  }
+
+  #text {
+    font-weight: bold; 
+    color: #0a7ebd;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+  }
+
+  #ltext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #63676a;
+    letter-spacing: 1.5px;
+    font-size: 11px;
+    transform: scale(1, 1.5);
+    -webkit-transform: scale(1, 1.75); /* Safari and Chrome */
+    -moz-transform: scale(1, 1.75); /* Firefox */
+    -ms-transform: scale(1, 1.75); /* IE 9+ */
+    -o-transform: scale(1, 1.75); /* Opera */
+  }
+
+  #img{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #mimg {
+    width: 250px;
+    max-width: 350px;
+    height: 250px;
+    max-height: 350px;
+    object-fit: scale-down;
+  }
+
+  img {
+   width: 100%; 
+  }
+
+  #form {
+    max-width: 250px;
+  }
+
+  Form.Control {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-weight: bold !important;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  #bckgrnd {
+    background-image: linear-gradient(to bottom, #007bc2, #e6f2ff);
+    height: 100vh;
+    min-width: 100%;
+  }
+
+  .clouds {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    max-height: 3000px;
+    background: url("../Images/clouds.png");
+    animation: animate 60s linear infinite;
+    overflow-y: scroll;
+  }
+  @keyframes animate
+  {
+    0%
+    {
+      background-position: 0px;
+    }
+    100%
+    {
+      background-position: -3094px;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  #mimg {
+    width: 200px;
+    max-width: 225px;
+    height: 200px;
+    max-height: 225px;
+    object-fit: scale-down;
+  }
+
+  .logo-text {
+    margin-top: -4.5vw !important;
+  }
+
+  #text {
+    position: absolute;
+    font-weight: bold; 
+    color: #0a7ebd;
+    left: 0;
+    right: 0;
+    font-size: clamp(14px, 2vw, 22px);
+  }
+
+  #ltext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #63676a;
+    letter-spacing: 1.5px;
+    font-size: 11px;
+    transform: scale(1, 1.5);
+    -webkit-transform: scale(1, 1.75); /* Safari and Chrome */
+    -moz-transform: scale(1, 1.75); /* Firefox */
+    -ms-transform: scale(1, 1.75); /* IE 9+ */
+    -o-transform: scale(1, 1.75); /* Opera */
+  }
+
+  img {
+   width: 100%; 
+  }
+
+
+  #form {
+    max-width: 250px;
+  }
+
+  Form.Control {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-weight: bold !important;
+  }
+}
+

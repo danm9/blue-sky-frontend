@@ -1,0 +1,78 @@
+#nav {
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background-color:#FFF;
+}
+
+.bgheader {
+    background-color: #49a2dd;
+    min-width: 100%;
+}
+
+.bgheader:hover {
+    cursor:pointer;
+   }
+
+.cloudyHeader {
+    position: relative;
+    min-width: 100%;
+    background: url("../Images/clouds.png");
+    animation: animate 60s linear infinite;
+    overflow-y: hidden;
+  }
+  @keyframes animate
+  {
+    0%
+    {
+      background-position: 0px;
+    }
+    100%
+    {
+      background-position: -3094px;
+    }
+  }
+
+#navMore {
+    width: 100%;
+    min-height: 90vh; 
+    transition: bottom 0.3s;
+    background-color:#FFF;
+}
+
+#navMoreText {
+    color:#014388;
+}
+
+#icon, #txt {
+    color:lightgrey; 
+}
+
+#txt {
+    font-size: 12px;
+}
+
+#wdth {
+    width: 100%;
+}
+
+#bckgnd {
+    background-color: #014388;
+}
+
+#wfnt {
+    font-weight: bold; 
+    color: #0a7ebd;
+}
+
+#wfnt:hover {
+    color:white;
+}
+
+#wfnt:active {
+    color: yellow;
+}
+
+#mleft {
+    margin-left: 10px;
+}
