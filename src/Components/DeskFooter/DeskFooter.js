@@ -14,15 +14,14 @@ export function DeskFooter() {
           id="bg"
         >
           <Card.Text className="text-center mr-3 ml-3 mb-1" id="blueyou">
-            WHAT CAN BLUE DO FOR YOU?
+            LET'S DO SOME TESTING
           </Card.Text>
           <Card.Text className="mr-3 ml-3 mt-2 text-center" id="estimates">
-            All estimates and proposals are guaranteed for six months and are
-            completed free of charge
+            All Data is Used for Testing and Automation
           </Card.Text>
           <Card.Text className="mr-3 ml-3 mt-2 text-center" id="copyright">
             <br />
-            Copyright © 2021 BlueSky. All Rights Reserved
+            This App is used for Testing Purposes Only
           </Card.Text>
         </Card.Body>
       </Card>

@@ -10,7 +10,7 @@ export function ContactUs() {
       className="d-flex pt-2 justify-content-center align-items-center"
       id="bckclr"
     >
-      <p id="contact">Got Questions? Call us at 1-844-992-5326</p>
+      <p id="contact">This App is used for Testing Purposes Only</p>
     </div>
   );
 }

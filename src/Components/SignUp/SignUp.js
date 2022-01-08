@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import axios from "axios";
 import { Form, Image, Button } from "react-bootstrap";
-import BlueSkyLogo from "../Images/loginLogo.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import { API_BASE_URL, userExistsByEmail } from "../API/Api";
 import { withRouter } from "react-router-dom";
 import validator from "validator";
@@ -38,12 +38,12 @@ function SignUp(props) {
     const capitalFirstLetter = (str) => {
       let newString = str.charAt(0).toUpperCase() + str.slice(1);
       return newString;
-    }
+    };
     setState((prevState) => ({
       ...prevState,
       firstName: capitalFirstLetter(state.firstName),
       lastName: capitalFirstLetter(state.lastName),
-    }))
+    }));
   }, [state.firstName, state.lastName]);
 
   // redirects to "SignUp Success" page
@@ -74,17 +74,17 @@ function SignUp(props) {
         .then(function (response) {
           if (response.status === 200) {
             redirectToSuccess();
-          } 
+          }
         })
         .catch(function (error) {
           console.log(error);
         });
-        setState((prevState) => ({
-          ...prevState,
-          display: true,
-          type: "success",
-          message: "signupSuccess",
-        }));
+      setState((prevState) => ({
+        ...prevState,
+        display: true,
+        type: "success",
+        message: "signupSuccess",
+      }));
     } else {
       setState((prevState) => ({
         ...prevState,
@@ -100,14 +100,13 @@ function SignUp(props) {
     e.preventDefault();
     if (state.newPassword === state.confirmPassword) {
       if (validator.isEmail(state.email)) {
-        if (! await userExistsByEmail(state.email)) {
+        if (!(await userExistsByEmail(state.email))) {
           setState((prevState) => ({
             ...prevState,
-            display: false
+            display: false,
           }));
           sendDetailsToServer();
-        }
-        else {
+        } else {
           setState((prevState) => ({
             ...prevState,
             display: true,
@@ -115,17 +114,15 @@ function SignUp(props) {
             message: "duplicate",
           }));
         }
-      }
-      else {
+      } else {
         setState((prevState) => ({
           ...prevState,
           display: true,
           type: "fail",
           message: "emailFormat",
         }));
-      } 
-    }
-    else {
+      }
+    } else {
       setState((prevState) => ({
         ...prevState,
         display: true,
@@ -141,14 +138,11 @@ function SignUp(props) {
         <div className="d-flex flex-column mx-auto" id="bckgrnd">
           <div className="clouds">
             <div className="img-fluid mt-5">
-              <Image id="img" src={BlueSkyLogo} />
+              <Image id="img" src={ClearSkyLogo} />
             </div>
             <div>
               <p className="mt-1 w-80 mx-auto text-center" id="ltext">
-                RESIDENTIAL & COMMERCIAL CLEANING
-              </p>
-              <p className="mt-1 w-80 mx-auto text-center" id="text">
-                SERVING CENTRAL FLORIDA
+                This App is used for Testing
               </p>
             </div>
             <br />
@@ -250,17 +244,14 @@ function SignUp(props) {
                   <Image
                     className="d-flex flex-column mx-auto"
                     id="mimg"
-                    src={BlueSkyLogo}
+                    src={ClearSkyLogo}
                   />
                 </div>
                 <div className="logo-text">
                   <p className="mt-1 w-80 mx-auto text-center" id="ltext">
-                    RESIDENTIAL & COMMERCIAL CLEANING
+                    This App is used for Testing
                   </p>
                   <br />
-                  <p className="mt-3 w-80 mx-auto text-center" id="text">
-                    SERVING CENTRAL FLORIDA
-                  </p>
                 </div>
               </div>
               <br />

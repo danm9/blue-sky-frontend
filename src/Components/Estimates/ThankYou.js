@@ -4,7 +4,7 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Image } from "react-bootstrap";
-import BlueSkyLogo from "../Images/topLogoBar.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import { fName, email } from "../LocalUser/LocalUser";
 import "./Estimates.css";
@@ -38,8 +38,12 @@ export function ThankYou() {
               Your estimate will be reviewed by one of our technicians and you
               will receive a quote via email to <strong>{email}</strong>
             </Card.Title>
-            <div className="thanks" id="thanksText">Thank You!</div>
-            <div className="tcontact" id="thanksText">We will contact you shortly...</div>
+            <div className="thanks" id="thanksText">
+              Thank You!
+            </div>
+            <div className="tcontact" id="thanksText">
+              We will contact you shortly...
+            </div>
           </Card.Body>
           <DeskFooter />
         </Card>
@@ -48,7 +52,7 @@ export function ThankYou() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader">
-            <Image src={BlueSkyLogo} id="wdth" />
+            <Image src={ClearSkyLogo} id="wdth" />
           </div>
         </div>
 
@@ -64,8 +68,12 @@ export function ThankYou() {
               Your estimate will be reviewed by one of our technicians and you
               will receive a quote via email to <strong>{email}</strong>
             </Card.Title>
-            <div className="thanks" id="thanksText">Thank You!</div>
-            <div className="tcontact" id="thanksText">We will contact you shortly...</div>
+            <div className="thanks" id="thanksText">
+              Thank You!
+            </div>
+            <div className="tcontact" id="thanksText">
+              We will contact you shortly...
+            </div>
           </Card.Body>
         </Card>
 

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Form, Image, Button } from "react-bootstrap";
-import BlueSkyLogo from "../Images/loginLogo.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import { Message } from "../Message/Message.js";
 import { API_BASE_URL, fetchNews, headers } from "../API/Api.js";
 import "./Login.css";
@@ -71,8 +71,7 @@ export function Login() {
             localNewsHeadline: news[i].headline,
             localNewsText: news[i].text,
           });
-        }
-        else if (userArray[0].localAccountType === "Administrator") {
+        } else if (userArray[0].localAccountType === "Administrator") {
           userArray.push({
             localNewsHeadline: news[1].headline,
             localNewsText: news[1].text,
@@ -101,14 +100,11 @@ export function Login() {
         <div className="d-flex flex-column mx-auto" id="bckgrnd">
           <div className="clouds">
             <div className="img-fluid mt-5">
-              <Image id="img" src={BlueSkyLogo} />
+              <Image id="img" src={ClearSkyLogo} />
             </div>
             <div>
               <p className="mt-1 w-80 mx-auto text-center" id="ltext">
-                RESIDENTIAL & COMMERCIAL CLEANING
-              </p>
-              <p className="mt-1 w-80 mx-auto text-center" id="text">
-                SERVING CENTRAL FLORIDA
+                This App is used for Testing
               </p>
             </div>
             <br />
@@ -173,16 +169,12 @@ export function Login() {
                 <Image
                   className="d-flex flex-column mx-auto"
                   id="mimg"
-                  src={BlueSkyLogo}
+                  src={ClearSkyLogo}
                 />
               </div>
               <div className="logo-text">
                 <p className="mt-1 w-80 mx-auto text-center" id="ltext">
-                  RESIDENTIAL & COMMERCIAL CLEANING
-                </p>
-                <br />
-                <p className="mt-3 w-80 mx-auto text-center" id="text">
-                  SERVING CENTRAL FLORIDA
+                  This App is used for Testing
                 </p>
               </div>
             </div>
@@ -196,17 +188,17 @@ export function Login() {
               />
               <Form onSubmit={handleSubmit}>
                 <Form.Group size="lg" controlId="email">
-                  <Form.Control 
-                    type="email" 
-                    placeholder="Email" 
+                  <Form.Control
+                    type="email"
+                    placeholder="Email"
                     // sets "email" state to user entered value
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </Form.Group>
                 <Form.Group size="lg" controlId="password">
-                  <Form.Control 
-                    type="password" 
-                    placeholder="Password" 
+                  <Form.Control
+                    type="password"
+                    placeholder="Password"
                     // sets "password" state to user entered value
                     onChange={(e) => setPassword(e.target.value)}
                   />

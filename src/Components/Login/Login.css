@@ -1,6 +1,4 @@
-@media all and (min-width: 480px) { 
-
-
+@media all and (min-width: 480px) {
   /*set div after "<BrowserView>" to this id*/
   #bckgrnd {
     background-image: linear-gradient(to bottom, #007bc2, #e6f2ff);
@@ -16,26 +14,22 @@
     background: url("../Images/clouds.png");
     animation: animate 60s linear infinite;
   }
-  @keyframes animate
-  {
-    0%
-    {
+  @keyframes animate {
+    0% {
       background-position: 0px;
     }
-    100%
-    {
+    100% {
       background-position: -3094px;
     }
   }
-
 
   .wrapper {
     position: relative;
   }
 
   #text {
-    font-weight: bold; 
-    color: #0a7ebd;
+    font-weight: bold;
+    color: #330ef3;
     left: 0;
     right: 0;
     font-size: 14px;
@@ -54,7 +48,7 @@
     -o-transform: scale(1, 1.75); /* Opera */
   }
 
-  #img{
+  #img {
     width: 300px;
     display: block;
     margin-left: auto;
@@ -70,7 +64,7 @@
   }
 
   img {
-   width: 100%; 
+    width: 100%;
   }
 
   #form {
@@ -111,14 +105,11 @@
     animation: animate 60s linear infinite;
     overflow-y: scroll;
   }
-  @keyframes animate
-  {
-    0%
-    {
+  @keyframes animate {
+    0% {
       background-position: 0px;
     }
-    100%
-    {
+    100% {
       background-position: -3094px;
     }
   }
@@ -141,8 +132,8 @@
 
   #text {
     position: absolute;
-    font-weight: bold; 
-    color: #0a7ebd;
+    font-weight: bold;
+    color: #330ef3;
     left: 0;
     right: 0;
     font-size: clamp(14px, 2vw, 22px);
@@ -162,9 +153,8 @@
   }
 
   img {
-   width: 100%; 
+    width: 100%;
   }
-
 
   #form {
     max-width: 250px;
@@ -178,4 +168,3 @@
     font-weight: bold !important;
   }
 }
-

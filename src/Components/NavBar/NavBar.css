@@ -1,78 +1,79 @@
 #nav {
-    position: fixed; 
-    bottom: 0; 
-    width: 100%; 
-    background-color:#FFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
 }
 
 .bgheader {
-    background-color: #49a2dd;
-    min-width: 100%;
+  display: flex;
+  background-color: #49a2dd;
+  min-width: 100%;
 }
 
 .bgheader:hover {
-    cursor:pointer;
-   }
+  cursor: pointer;
+}
 
 .cloudyHeader {
-    position: relative;
-    min-width: 100%;
-    background: url("../Images/clouds.png");
-    animation: animate 60s linear infinite;
-    overflow-y: hidden;
+  display: flex;
+  position: relative;
+  min-width: 100%;
+  background: url("../Images/clouds.png");
+  animation: animate 60s linear infinite;
+  overflow-y: hidden;
+}
+@keyframes animate {
+  0% {
+    background-position: 0px;
   }
-  @keyframes animate
-  {
-    0%
-    {
-      background-position: 0px;
-    }
-    100%
-    {
-      background-position: -3094px;
-    }
+  100% {
+    background-position: -3094px;
   }
+}
 
 #navMore {
-    width: 100%;
-    min-height: 90vh; 
-    transition: bottom 0.3s;
-    background-color:#FFF;
+  width: 100%;
+  min-height: 90vh;
+  transition: bottom 0.3s;
+  background-color: #fff;
 }
 
 #navMoreText {
-    color:#014388;
+  color: #330ef3;
 }
 
-#icon, #txt {
-    color:lightgrey; 
+#icon,
+#txt {
+  color: rgb(153, 148, 148);
 }
 
 #txt {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 #wdth {
-    width: 100%;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #bckgnd {
-    background-color: #014388;
+  background-color: #330ef3;
 }
 
 #wfnt {
-    font-weight: bold; 
-    color: #0a7ebd;
+  font-weight: bold;
+  color: #4b8db1;
 }
 
 #wfnt:hover {
-    color:white;
+  color: white;
 }
 
 #wfnt:active {
-    color: yellow;
+  color: yellow;
 }
 
 #mleft {
-    margin-left: 10px;
+  margin-left: 10px;
 }

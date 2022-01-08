@@ -9,7 +9,7 @@ import { AdminNews } from "./AdminNews";
 import { AdminCategories } from "./AdminCategories";
 import { Card, Button, Image, Tabs, Tab } from "react-bootstrap";
 import { email } from "../LocalUser/LocalUser.js";
-import HeaderLogo from "../Images/mTopLogoBar.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar.js";
 import { DeskFooter } from "../DeskFooter/DeskFooter.js";
 import { accountType } from "../LocalUser/LocalUser.js";
@@ -18,15 +18,16 @@ import { accountType } from "../LocalUser/LocalUser.js";
 
 // Provides admin console page
 export function Admin() {
-  const [token] = useState(sessionStorage.getItem('token') || '');
+  const [token] = useState(sessionStorage.getItem("token") || "");
   const [key, setKey] = useState(1);
   const [estimates, setEstimates] = useState([]);
   const [users, setUsers] = useState([]);
 
-
   // Secure Admin page by checking window name set at login and account type if admin
-  if (window.name !== "kjhdRg8*&6!sDf$lKgfh%" || accountType !== "Administrator") {
-
+  if (
+    window.name !== "kjhdRg8*&6!sDf$lKgfh%" ||
+    accountType !== "Administrator"
+  ) {
     window.location.href = "/login";
   }
 
@@ -52,7 +53,7 @@ export function Admin() {
   return (
     <>
       <BrowserView>
-        <BrowserNavBar/>
+        <BrowserNavBar />
         <Card className="border-0">
           <Card.Header
             className="d-flex justify-content-center align-items-center mb-1 border-0"
@@ -110,7 +111,7 @@ export function Admin() {
 
       <MobileView>
         <Image
-          src={HeaderLogo}
+          src={ClearSkyLogo}
           className="d-flex w-100 mx-auto justify-content-center"
         />
         <Card className="border-0" id="mcrd">

@@ -6,7 +6,7 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Form, Image, Button } from "react-bootstrap";
-import BlueSkyLogo from "../Images/topLogoBar.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import { fName, lName, email, accountType } from "../LocalUser/LocalUser";
 import { Message } from "../Message/Message.js";
@@ -38,7 +38,7 @@ export function Estimates() {
   // Builds the table for Estimates from fetched data
   let categoryTable = [];
   let categories = [];
-  
+
   for (let i in servicecategories) {
     let servID = 1;
     if (accountType === servicecategories[i].customerType) {
@@ -51,7 +51,7 @@ export function Estimates() {
               type="checkbox"
               label={servicecategories[i].services[j]}
               name={servicecategories[i].services[j]}
-              onClick = {(e) => {
+              onClick={(e) => {
                 inspectElement(e);
               }}
             />
@@ -77,26 +77,25 @@ export function Estimates() {
           <Form.Group size="lg" controlId="otherText">
             <Form.Control
               className="mb-2"
-              style={{ fontSize: "14px"}}
+              style={{ fontSize: "14px" }}
               as="textarea"
               rows={3}
-              defaultValue = {otherValue}
+              defaultValue={otherValue}
               maxLength="100"
               placeholder="(Required) Please describe needed service."
               name={otherValue}
               onChange={(e) => setOtherValue(e.target.value)}
             />
           </Form.Group>
-        )
-      }
-      else {
+        );
+      } else {
         setTextField("");
         setState(() => ({
-          display: false
+          display: false,
         }));
       }
     }
-  }
+  };
 
   // Handles actions when user presses "Submit" button. These include checking...
   //  ... to ensure a text value exists if "Other" is checked, displaying correct...
@@ -108,9 +107,8 @@ export function Estimates() {
       if (ele.checked) {
         if (ele.name === "Other") {
           if (otherValue !== "") {
-          estimateServiceArray.push("Other: " + otherValue)
-          }
-          else {
+            estimateServiceArray.push("Other: " + otherValue);
+          } else {
             setState(() => ({
               display: true,
               type: "fail",
@@ -118,8 +116,7 @@ export function Estimates() {
             }));
             return;
           }
-        }
-        else {
+        } else {
           estimateServiceArray.push(ele.name);
         }
       }
@@ -145,13 +142,12 @@ export function Estimates() {
   return (
     <>
       <MetaTags>
-        <title>Blue Sky | Estimates</title>
+        <title>Clear Sky | Estimates</title>
         <meta
-          name="Blue Sky Estimates"
-          content="Welcome to Blue Sky, we are your go to for Commercial and Residential cleaning!"
+          name="Clear Sky Home"
+          content="Welcome to Clear Sky App, we use this for testing"
         />
-        <meta property="og:title" content="Blue Sky Estimates" />
-        <meta property="og:image" content="../Images/Header.png" />
+        <meta property="og:title" content="Clear Sky Home" />
       </MetaTags>
 
       <BrowserView>
@@ -171,13 +167,11 @@ export function Estimates() {
             <Form className="align-content-center">
               <div className="d-block text-center">
                 <div className="d-inline-block text-left w-100">
-                {categoryTable}
+                  {categoryTable}
                 </div>
               </div>
-              <div style={{width:"200px"}}>
-                {textField}
-              </div>
-              <div className="mx-auto" style={{maxWidth:"200px"}}>
+              <div style={{ width: "200px" }}>{textField}</div>
+              <div className="mx-auto" style={{ maxWidth: "200px" }}>
                 <Message
                   device="browser"
                   display={state.display}
@@ -207,7 +201,7 @@ export function Estimates() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader">
-            <Image src={BlueSkyLogo} id="wdth" />
+            <Image src={ClearSkyLogo} id="wdth" />
           </div>
         </div>
         <Card className="border-0" id="mcrd">

@@ -1,13 +1,12 @@
 // Author(s): Sam
 import React from "react";
 import { NavDropdown, Image, Nav } from "react-bootstrap";
-import BlueSkyLogo from "../Images/topLogoBar.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import { MobileNavBar } from "../NavBar/MobileNavBar";
 import "../NavBar/NavBar.css";
 
 // Provides the menu for mobile when user selects the "More" button
 export function MoreMenu() {
-  
   // Clears ssession storage when "logout" button is pressed
   const logOut = () => {
     sessionStorage.clear();
@@ -15,11 +14,11 @@ export function MoreMenu() {
 
   return (
     <div id="navMore">
-        <div className="bgheader">
-          <div className="cloudyHeader">
-            <Image src={BlueSkyLogo} id="wdth" />
-          </div>
+      <div className="bgheader">
+        <div className="cloudyHeader">
+          <Image src={ClearSkyLogo} id="wdth" />
         </div>
+      </div>
       <Nav defaultActiveKey="/home" className="flex-column">
         <Nav.Link href="/profile" id="navMoreText" className="mt-2">
           Profile

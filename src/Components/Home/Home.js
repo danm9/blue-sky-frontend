@@ -5,17 +5,10 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Image, Button } from "react-bootstrap";
-import BlueSkyLogo from "../Images/topLogoBar.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import ImageOne from "../Images/hero1.jpg";
 import ImageTwo from "../Images/hero2.jpg";
-import ImageThree from "../Images/heroes.jpeg";
-import ImageFour from "../Images/pressurewash.jpeg";
-import ImageFive from "../Images/sidewalk.jpg";
-import mImageOne from "../Images/mHero1.jpg";
-import mImageTwo from "../Images/mHero2.jpg";
-import mImageThree from "../Images/mHero3.jpeg";
-import mImageFour from "../Images/mHero4.jpeg";
-import mImageFive from "../Images/hero.jpg";
+import ImageThree from "../Images/hero3.jpg";
 import { newsHeadline, newsText } from "../LocalUser/LocalUser";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import { restrictPage } from "../API/Api";
@@ -23,11 +16,9 @@ import "./Home.css";
 
 // Provides home page
 export function Home() {
-  const picArray = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
+  const picArray = [ImageOne, ImageTwo, ImageThree];
   const randIndex = Math.floor(Math.random() * picArray.length);
   const selPicture = picArray[randIndex];
-  const mPicArray = [mImageOne, mImageTwo, mImageThree, mImageFour, mImageFive];
-  const mSelPicture = mPicArray[randIndex];
 
   useEffect(() => {
     restrictPage();
@@ -36,13 +27,12 @@ export function Home() {
   return (
     <>
       <MetaTags>
-        <title>Blue Sky | Home</title>
+        <title>Clear Sky | Home</title>
         <meta
-          name="Blue Sky Home"
-          content="Welcome to Blue Sky, we are your go to for Commercial and Residential cleaning!"
+          name="Clear Sky Home"
+          content="Welcome to Clear Sky App, we use this for testing"
         />
-        <meta property="og:title" content="Blue Sky Home" />
-        <meta property="og:image" content="../Images/Header.png" />
+        <meta property="og:title" content="Clear Sky Home" />
       </MetaTags>
 
       <BrowserView>
@@ -91,7 +81,7 @@ export function Home() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader">
-            <Image src={BlueSkyLogo} id="wdth" />
+            <Image src={ClearSkyLogo} id="wdth" />
           </div>
         </div>
 
@@ -110,7 +100,7 @@ export function Home() {
 
           <div
             className="d-flex mx-auto justify-content-center border border-dark border-3"
-            style={{ backgroundImage: `url("${mSelPicture}")` }}
+            style={{ backgroundImage: `url("${selPicture}")` }}
             id="image"
           ></div>
 
@@ -119,11 +109,10 @@ export function Home() {
             id="cardbody"
           >
             <Card.Text className="text-center mr-3 ml-3 mb-1" id="blueyou">
-              WHAT CAN BLUE DO FOR YOU?
+              LET'S DO SOME TESTING
             </Card.Text>
             <Card.Text className="mr-2 ml-2 mt-2 text-center" id="estimates">
-              All estimates and proposals are guaranteed for six months and are
-              completed free of charge
+              All Data is Used for Testing and Automation
             </Card.Text>
           </Card.Body>
           <Card.Body className="d-flex justify-content-center" id="cardbody">

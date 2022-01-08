@@ -1,7 +1,7 @@
 // Author(s): Sam
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
-import BlueSkyLogo from "../Images/topLogoBar.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import "./NavBar.css";
 
 // Provides the nav bar for browser view
@@ -39,8 +39,8 @@ export function BrowserNavBar(props) {
       var services = navStyle;
       break;
 
-    case "blueBucks":
-      var blueBucks = navStyle;
+    case "clearBucks":
+      var clearBucks = navStyle;
       break;
 
     case "profile":
@@ -59,7 +59,7 @@ export function BrowserNavBar(props) {
     <>
       <div onClick={returnHome} className="bgheader">
         <div className="cloudyHeader">
-          <Image src={BlueSkyLogo} id="wdth" />
+          <Image src={ClearSkyLogo} id="wdth" />
         </div>
       </div>
       <Navbar id="bckgnd">
@@ -84,12 +84,12 @@ export function BrowserNavBar(props) {
             SERVICES
           </Nav.Link>
           <Nav.Link
-            style={blueBucks}
-            href="/blueBucks"
+            style={clearBucks}
+            href="/clearBucks"
             id="wfnt"
-            data-testid="blueBucksNav"
+            data-testid="clearBucksNav"
           >
-            BLUE BUCKS
+            CLEAR BUCKS
           </Nav.Link>
           <Nav.Link
             style={profile}

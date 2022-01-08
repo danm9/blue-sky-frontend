@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Login } from "./Components/Login/Login";
 import SignUp from "./Components/SignUp/SignUp";
 import { Home } from "./Components/Home/Home";
-import { BlueBucks } from "./Components/BlueBucks/BlueBucks";
+import { ClearBucks } from "./Components/ClearBucks/ClearBucks";
 import { Estimates } from "./Components/Estimates/Estimates";
 import { Services } from "./Components/Services/Services";
 import { ThankYou } from "./Components/Estimates/ThankYou";
@@ -26,7 +26,7 @@ function App() {
         <Route path="/thankYou" component={ThankYou} />
         <Route path="/services" component={Services} />
         <Route path="/estimates" component={Estimates} />
-        <Route path="/blueBucks" component={BlueBucks} />
+        <Route path="/clearBucks" component={ClearBucks} />
         <Route path="/home" component={Home} />
         <Route path="/signUp">
           <SignUp />

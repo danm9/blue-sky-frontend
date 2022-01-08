@@ -6,7 +6,7 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Image, Table, Button } from "react-bootstrap";
-import BlueSkyLogo from "../Images/topLogoBar.png";
+import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import { fName, invoices } from "../LocalUser/LocalUser";
 import { restrictPage } from "../API/Api";
@@ -137,8 +137,7 @@ export function Services() {
 
     if (today - inputDate > 180) {
       buttonInput.push(<Link to="/estimates">New Estimate</Link>);
-    } 
-    else {
+    } else {
       buttonInput.push(
         <Button variant="secondary" size="sm">
           Repeat
@@ -168,13 +167,12 @@ export function Services() {
   return (
     <>
       <MetaTags>
-        <title>Blue Sky | Services</title>
+        <title>Clear Sky | Services</title>
         <meta
-          name="Blue Sky Services"
-          content="Welcome to Blue Sky, we are your go to for Commercial and Residential cleaning!"
+          name="Clear Sky Home"
+          content="Welcome to Clear Sky App, we use this for testing"
         />
-        <meta property="og:title" content="Blue Sky Home" />
-        <meta property="og:image" content="../Images/Header.png" />
+        <meta property="og:title" content="Clear Sky Home" />
       </MetaTags>
 
       <BrowserView>
@@ -215,7 +213,7 @@ export function Services() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader">
-            <Image src={BlueSkyLogo} id="wdth" />
+            <Image src={ClearSkyLogo} id="wdth" />
           </div>
         </div>
 

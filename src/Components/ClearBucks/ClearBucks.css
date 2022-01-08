@@ -7,7 +7,7 @@
     background-color: #fff;
     height: 40px;
     font-weight: bold;
-    color: #0a7ebd;
+    color: #3318bd;
     font-size: 20px;
   }
 
@@ -75,12 +75,12 @@
     background-color: #fff;
     height: 40px;
     font-weight: bold;
-    color: #0a7ebd;
+    color: #330ef3;
     font-size: 20px;
   }
 
   #mchead {
-    background-color: #0a7ebd;
+    background-color: #3318bd;
     height: 40px;
     font-weight: bold;
   }
@@ -98,7 +98,7 @@
     text-align: center;
   }
 
-  #bbearned {
+  #cbearned {
     font-size: 14px;
   }
 
@@ -178,9 +178,7 @@
 }
 
 @media all and (max-height: 570px) {
-
   #bcrd {
     height: 71.5vh;
   }
-
 }
