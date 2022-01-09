@@ -324,7 +324,7 @@ export function Profile() {
 
       <MobileView>
         <div className="bgheader">
-          <div className="cloudyHeader">
+          <div className="cloudyHeader pt-3 pb-3">
             <Image src={ClearSkyLogo} id="wdth" />
           </div>
         </div>
