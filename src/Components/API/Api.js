@@ -3,7 +3,7 @@ import axios from "axios";
 
 // export const API_BASE_URL = "http://localhost:4000";
 export const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "https://blueskyapi.herokuapp.com";
+  process.env.REACT_APP_API_BASE_URL || "https://blueskyapi.netlify.app/";
 
 // Creates JWT headers to add a token if present.
 export const headers = (token) => {
