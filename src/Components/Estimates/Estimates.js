@@ -6,7 +6,7 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Form, Image, Button } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import { fName, lName, email, accountType } from "../LocalUser/LocalUser";
 import { Message } from "../Message/Message.js";
@@ -142,12 +142,12 @@ export function Estimates() {
   return (
     <>
       <MetaTags>
-        <title>Clear Sky | Estimates</title>
+        <title>BlueSky | Estimates</title>
         <meta
-          name="Clear Sky Home"
-          content="Welcome to Clear Sky App, we use this for testing"
+          name=" Home"
+          content="Welcome to BlueSky App, we use this for testing"
         />
-        <meta property="og:title" content="Clear Sky Home" />
+        <meta property="og:title" content="BlueSky Home" />
       </MetaTags>
 
       <BrowserView>
@@ -201,7 +201,7 @@ export function Estimates() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader pt-3 pb-3">
-            <Image src={ClearSkyLogo} id="wdth" />
+            <Image src={BlueSkyLogo} id="wdth" />
           </div>
         </div>
         <Card className="border-0" id="mcrd">

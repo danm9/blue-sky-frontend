@@ -9,7 +9,7 @@ import { AdminNews } from "./AdminNews";
 import { AdminCategories } from "./AdminCategories";
 import { Card, Button, Image, Tabs, Tab } from "react-bootstrap";
 import { email } from "../LocalUser/LocalUser.js";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar.js";
 import { DeskFooter } from "../DeskFooter/DeskFooter.js";
 import { accountType } from "../LocalUser/LocalUser.js";
@@ -111,7 +111,7 @@ export function Admin() {
 
       <MobileView>
         <Image
-          src={ClearSkyLogo}
+          src={BlueSkyLogo}
           className="d-flex w-100 mx-auto justify-content-center"
         />
         <Card className="border-0" id="mcrd">

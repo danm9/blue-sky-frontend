@@ -5,7 +5,7 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Image, Button } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import ImageOne from "../Images/hero1.jpg";
 import ImageTwo from "../Images/hero2.jpg";
 import ImageThree from "../Images/hero3.jpg";
@@ -27,12 +27,12 @@ export function Home() {
   return (
     <>
       <MetaTags>
-        <title>Clear Sky | Home</title>
+        <title>BlueSky | Home</title>
         <meta
-          name="Clear Sky Home"
-          content="Welcome to Clear Sky App, we use this for testing"
+          name="BlueSky Home"
+          content="Welcome to BlueSky App, we use this for testing"
         />
-        <meta property="og:title" content="Clear Sky Home" />
+        <meta property="og:title" content="BlueSky Home" />
       </MetaTags>
 
       <BrowserView>
@@ -81,7 +81,7 @@ export function Home() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader pt-3 pb-3">
-            <Image src={ClearSkyLogo} id="wdth" />
+            <Image src={BlueSkyLogo} id="wdth" />
           </div>
         </div>
 

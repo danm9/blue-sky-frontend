@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import axios from "axios";
 import { Form, Image, Button } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import LoginLogo from "../Images/loginLogo.png";
 import { API_BASE_URL, userExistsByEmail } from "../API/Api";
 import { withRouter } from "react-router-dom";
 import validator from "validator";
@@ -138,7 +138,7 @@ function SignUp(props) {
         <div className="d-flex flex-column mx-auto" id="bckgrnd">
           <div className="clouds">
             <div className="img-fluid mt-5">
-              <Image id="img" src={ClearSkyLogo} />
+              <Image id="img" src={LoginLogo} />
             </div>
             <div>
               <p className="mt-1 w-80 mx-auto text-center" id="ltext">
@@ -244,7 +244,7 @@ function SignUp(props) {
                   <Image
                     className="d-flex flex-column mx-auto"
                     id="mimg"
-                    src={ClearSkyLogo}
+                    src={LoginLogo}
                   />
                 </div>
                 <div className="logo-text">
