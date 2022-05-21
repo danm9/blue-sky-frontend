@@ -1,7 +1,7 @@
 // Author(s): Sam
 import React from "react";
 import { NavDropdown, Image, Nav } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import { MobileNavBar } from "../NavBar/MobileNavBar";
 import "../NavBar/NavBar.css";
 
@@ -16,7 +16,7 @@ export function MoreMenu() {
     <div id="navMore">
       <div className="bgheader">
         <div className="cloudyHeader">
-          <Image src={ClearSkyLogo} id="wdth" />
+          <Image src={BlueSkyLogo} id="wdth" />
         </div>
       </div>
       <Nav defaultActiveKey="/home" className="flex-column">

@@ -16,7 +16,7 @@ import "./NavBar.css";
 export function MobileNavBar(props) {
   const [iconColor, setIconColor] = useState("");
   let iconStyle = {
-    color: "#330ef3",
+    color: "#004388",
   };
 
   // Gets state when component loads or refreshes to determine which page is active
@@ -42,8 +42,8 @@ export function MobileNavBar(props) {
       var services = iconStyle;
       break;
 
-    case "clearBucks":
-      var clearBucks = iconStyle;
+    case "blueBucks":
+      var blueBucks = iconStyle;
       break;
 
     case "moreMenu":
@@ -102,19 +102,19 @@ export function MobileNavBar(props) {
               Services
             </Navbar.Text>
           </Navbar.Brand>
-          <Navbar.Brand href="/clearBucks" className="d-flex flex-column">
+          <Navbar.Brand href="/blueBucks" className="d-flex flex-column">
             <FontAwesomeIcon
               className="mx-auto"
-              style={clearBucks}
+              style={blueBucks}
               id="icon"
               icon={faMoneyBillWaveAlt}
             />
             <Navbar.Text
               className="text-center h-25 pt-0"
               id="txt"
-              style={clearBucks}
+              style={blueBucks}
             >
-              Clear Bucks
+              BlueBucks
             </Navbar.Text>
           </Navbar.Brand>
           <Navbar.Brand href="/moreMenu" className="d-flex flex-column">

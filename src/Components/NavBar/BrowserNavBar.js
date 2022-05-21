@@ -1,7 +1,7 @@
 // Author(s): Sam
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import "./NavBar.css";
 
 // Provides the nav bar for browser view
@@ -39,8 +39,8 @@ export function BrowserNavBar(props) {
       var services = navStyle;
       break;
 
-    case "clearBucks":
-      var clearBucks = navStyle;
+    case "blueBucks":
+      var blueBucks = navStyle;
       break;
 
     case "profile":
@@ -59,13 +59,13 @@ export function BrowserNavBar(props) {
     <>
       <div onClick={returnHome} className="bgheader">
         <div className="cloudyHeader">
-          <Image src={ClearSkyLogo} id="wdth" />
+          <Image src={BlueSkyLogo} id="wdth" />
         </div>
       </div>
       <Navbar id="bckgnd">
         <Nav className="mx-auto">
           <Nav.Link style={home} href="/home" id="wfnt" data-testid="homeNav">
-            HOME
+            Home
           </Nav.Link>
           <Nav.Link
             style={estimates}
@@ -73,7 +73,7 @@ export function BrowserNavBar(props) {
             id="wfnt"
             data-testid="estimateNav"
           >
-            ESTIMATE
+            Estimates
           </Nav.Link>
           <Nav.Link
             style={services}
@@ -81,15 +81,15 @@ export function BrowserNavBar(props) {
             id="wfnt"
             data-testid="servicesNav"
           >
-            SERVICES
+            Services
           </Nav.Link>
           <Nav.Link
-            style={clearBucks}
-            href="/clearBucks"
+            style={blueBucks}
+            href="/blueBucks"
             id="wfnt"
-            data-testid="clearBucksNav"
+            data-testid="blueBucksNav"
           >
-            CLEAR BUCKS
+            BlueBucks
           </Nav.Link>
           <Nav.Link
             style={profile}
@@ -97,7 +97,7 @@ export function BrowserNavBar(props) {
             id="wfnt"
             data-testid="profileNav"
           >
-            PROFILE
+            Profile
           </Nav.Link>
           <Nav.Link
             href="/login"
@@ -105,7 +105,7 @@ export function BrowserNavBar(props) {
             data-testid="logoutNav"
             onClick={logOut}
           >
-            LOG OUT
+            Logout
           </Nav.Link>
         </Nav>
       </Navbar>

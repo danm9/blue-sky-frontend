@@ -6,7 +6,7 @@ body #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh !important;
-  background-color: #330ef3;
+  background-color: #004388;
   overflow-y: visible;
   overflow-x: hidden;
 }

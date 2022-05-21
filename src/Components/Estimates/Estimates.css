@@ -1,6 +1,6 @@
 @media all and (min-width: 480px) {
   #bchead {
-    background-color: #3318bd;
+    background-color: #0180c7;
     height: 40px;
     font-weight: bold;
     color: white;
@@ -33,10 +33,10 @@
   }
 
   .thanks {
-    color: #3318bd;
+    color: #0180c7;
     display: block;
     position: relative;
-    border: 5px solid #330ef3;
+    border: 5px solid #004388;
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -84,7 +84,7 @@
 
   .tcontact {
     position: relative;
-    color: #330ef3;
+    color: #004388;
     margin: 25px auto;
     width: 100%;
     text-align: center;
@@ -106,7 +106,7 @@
 
 @media all and (max-width: 480px) {
   #mchead {
-    background-color: #330ef3;
+    background-color: #004388;
     height: 40px;
     font-weight: bold;
   }
@@ -130,10 +130,10 @@
   }
 
   .thanks {
-    color: #330ef3;
+    color: #004388;
     display: block;
     position: relative;
-    border: 5px solid #330ef3;
+    border: 5px solid #004388;
     border-radius: 50%;
     height: 150px;
     width: 150px;
@@ -181,7 +181,7 @@
 
   .tcontact {
     position: relative;
-    color: #330ef3;
+    color: #004388;
     margin: 25px auto;
     width: 100%;
     text-align: center;

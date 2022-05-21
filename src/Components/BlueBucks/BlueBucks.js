@@ -5,14 +5,14 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Image, Table } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import { fName, blueBucks } from "../LocalUser/LocalUser";
 import { restrictPage } from "../API/Api";
-import "./ClearBucks.css";
+import "./BlueBucks.css";
 
-// Provides clearbucks page
-export function ClearBucks() {
+// Provides BlueBucks page
+export function BlueBucks() {
   useEffect(() => {
     restrictPage();
   }, []);
@@ -38,7 +38,7 @@ export function ClearBucks() {
   if (bb_table.length === 0) {
     bb_table.push(
       <tr style={{ fontSize: "11px", textAlign: "center" }}>
-        <td colspan="3">No Clear Bucks</td>
+        <td colspan="3">No BlueBucks</td>
       </tr>
     );
   }
@@ -63,12 +63,12 @@ export function ClearBucks() {
   return (
     <>
       <MetaTags>
-        <title>Clear Sky | Clear Bucks</title>
+        <title>BlueSky | BlueBucks</title>
         <meta
-          name="Clear Sky Clear Bucks"
-          content="Welcome to Clear Sky, this app is used for testing purposes"
+          name="BlueSky Blue Bucks"
+          content="Welcome to BlueSky, this app is used for testing purposes"
         />
-        <meta property="og:title" content="Clear Sky Clear Bucks" />
+        <meta property="og:title" content="BlueSky Blue Bucks" />
         <meta property="og:image" content="../Images/Header.png" />
       </MetaTags>
 
@@ -80,7 +80,7 @@ export function ClearBucks() {
             className="d-flex justify-content-center align-items-center mb-2 border-0"
             id="cardh"
           >
-            {fName}'s Clear Bucks History
+            {fName}'s BlueBucks History
           </Card.Header>
 
           <Card.Body className="mx-auto w-50">
@@ -110,8 +110,8 @@ export function ClearBucks() {
             </div>
           </Card.Body>
           <Card.Text className="text-center mr-3 ml-3 mb-1 mt-3" id="earned">
-            Clear Bucks are earned through special promotions and upon payment
-            of services and can be redeemed for future service discounts.
+            BlueBucks are earned through special promotions and upon payment of
+            services and can be redeemed for future service discounts.
           </Card.Text>
           <DeskFooter />
         </Card>
@@ -120,7 +120,7 @@ export function ClearBucks() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader pt-3 pb-3">
-            <Image src={ClearSkyLogo} id="wdth" />
+            <Image src={BlueSkyLogo} id="wdth" />
           </div>
         </div>
 
@@ -129,7 +129,7 @@ export function ClearBucks() {
             className="d-flex justify-content-center align-items-center text-white"
             id="mchead"
           >
-            {fName}'s Clear Bucks History
+            {fName}'s BlueBucks History
           </Card.Header>
 
           <Card.Body id="brdbody">
@@ -151,8 +151,8 @@ export function ClearBucks() {
             </div>
           </Card.Body>
           <Card.Text className="text-center mr-3 ml-3 mb-1" id="cbearned">
-            Clear Bucks are earned through special promotions and upon payment
-            of services and can be redeemed for future service discounts.
+            BlueBucks are earned through special promotions and upon payment of
+            services and can be redeemed for future service discounts.
           </Card.Text>
         </Card>
 

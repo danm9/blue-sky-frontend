@@ -6,7 +6,7 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Image, Table, Button } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import { fName, invoices } from "../LocalUser/LocalUser";
 import { restrictPage } from "../API/Api";
@@ -167,12 +167,12 @@ export function Services() {
   return (
     <>
       <MetaTags>
-        <title>Clear Sky | Services</title>
+        <title>BlueSky | Services</title>
         <meta
-          name="Clear Sky Home"
-          content="Welcome to Clear Sky App, we use this for testing"
+          name="BlueSky Home"
+          content="Welcome to BlueSky App, we use this for testing"
         />
-        <meta property="og:title" content="Clear Sky Home" />
+        <meta property="og:title" content="BlueSky Home" />
       </MetaTags>
 
       <BrowserView>
@@ -213,7 +213,7 @@ export function Services() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader pt-3 pb-3">
-            <Image src={ClearSkyLogo} id="wdth" />
+            <Image src={BlueSkyLogo} id="wdth" />
           </div>
         </div>
 

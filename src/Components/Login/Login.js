@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Form, Image, Button } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import LoginLogo from "../Images/loginLogo.png";
 import { Message } from "../Message/Message.js";
 import { API_BASE_URL, fetchNews, headers } from "../API/Api.js";
 import "./Login.css";
@@ -100,7 +100,7 @@ export function Login() {
         <div className="d-flex flex-column mx-auto" id="bckgrnd">
           <div className="clouds">
             <div className="img-fluid mt-5">
-              <Image id="img" src={ClearSkyLogo} />
+              <Image id="img" src={LoginLogo} />
             </div>
             <div>
               <p className="mt-1 w-80 mx-auto text-center" id="ltext">
@@ -169,7 +169,7 @@ export function Login() {
                 <Image
                   className="d-flex flex-column mx-auto"
                   id="mimg"
-                  src={ClearSkyLogo}
+                  src={LoginLogo}
                 />
               </div>
               <div className="logo-text">

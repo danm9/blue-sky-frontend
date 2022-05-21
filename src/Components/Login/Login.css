@@ -29,7 +29,7 @@
 
   #text {
     font-weight: bold;
-    color: #330ef3;
+    color: #004388;
     left: 0;
     right: 0;
     font-size: 14px;
@@ -133,7 +133,7 @@
   #text {
     position: absolute;
     font-weight: bold;
-    color: #330ef3;
+    color: #004388;
     left: 0;
     right: 0;
     font-size: clamp(14px, 2vw, 22px);

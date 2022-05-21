@@ -11,7 +11,7 @@ import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
 import { Card, Form, Image, Button } from "react-bootstrap";
-import ClearSkyLogo from "../Images/ClearSkyAppLogo.png";
+import BlueSkyLogo from "../Images/topLogoBar.png";
 import { DeskFooter } from "../DeskFooter/DeskFooter";
 import {
   fName,
@@ -325,7 +325,7 @@ export function Profile() {
       <MobileView>
         <div className="bgheader">
           <div className="cloudyHeader pt-3 pb-3">
-            <Image src={ClearSkyLogo} id="wdth" />
+            <Image src={BlueSkyLogo} id="wdth" />
           </div>
         </div>
 
