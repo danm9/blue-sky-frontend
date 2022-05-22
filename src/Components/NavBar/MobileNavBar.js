@@ -84,7 +84,7 @@ export function MobileNavBar(props) {
               id="txt"
               style={estimates}
             >
-              Estimate
+              Estimates
             </Navbar.Text>
           </Navbar.Brand>
           <Navbar.Brand href="/services" className="d-flex flex-column">

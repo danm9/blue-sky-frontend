@@ -1,5 +1,3 @@
-// Author(s): Sam
-
 // Creates global variables for user session data that can be used by other components
 const userArray = sessionStorage.getItem("localUser")
   ? JSON.parse(sessionStorage.getItem("localUser"))

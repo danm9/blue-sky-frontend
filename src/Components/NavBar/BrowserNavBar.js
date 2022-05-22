@@ -1,4 +1,3 @@
-// Author(s): Sam
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import BlueSkyLogo from "../Images/topLogoBar.png";

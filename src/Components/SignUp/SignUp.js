@@ -1,4 +1,3 @@
-// Author(s): Asish, Dan, Sam
 import React, { useState, useEffect } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import axios from "axios";

@@ -150,7 +150,7 @@ export function BlueBucks() {
               </Table>
             </div>
           </Card.Body>
-          <Card.Text className="text-center mr-3 ml-3 mb-1" id="cbearned">
+          <Card.Text className="text-center mr-3 ml-3 mb-3" id="cbearned">
             BlueBucks are earned through special promotions and upon payment of
             services and can be redeemed for future service discounts.
           </Card.Text>
