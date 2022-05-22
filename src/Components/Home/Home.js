@@ -1,4 +1,3 @@
-// Author(s): Dan, Sam
 import React, { useEffect } from "react";
 import MetaTags from "react-meta-tags";
 import { MobileNavBar } from "../NavBar/MobileNavBar";

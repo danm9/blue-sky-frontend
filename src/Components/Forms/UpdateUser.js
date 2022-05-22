@@ -1,11 +1,6 @@
-// Author(s): Sam
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {
-  API_BASE_URL,
-  userExistsByEmail,
-  headers
-} from "../API/Api.js";
+import { API_BASE_URL, userExistsByEmail, headers } from "../API/Api.js";
 import { Form, Button } from "react-bootstrap";
 import { Message } from "../Message/Message.js";
 import "../Profile/Profile.css";
@@ -14,7 +9,7 @@ import Modal from "../Modal/Modal.js";
 
 // Provides edit form for search users tab
 export function UpdateUser(props) {
-  const [token] = useState(sessionStorage.getItem('token') || '');
+  const [token] = useState(sessionStorage.getItem("token") || "");
   const [accountOption, setAccountOption] = useState();
   const [accountOptionTwo, setAccountOptionTwo] = useState();
   const [state, setState] = useState({
@@ -44,7 +39,7 @@ export function UpdateUser(props) {
   const handleSelect = (e) => {
     setState((prevState) => ({
       ...prevState,
-      accountType: e.target.value
+      accountType: e.target.value,
     }));
   };
 
@@ -130,7 +125,7 @@ export function UpdateUser(props) {
     }
   };
 
-  // Checks password values to ensure they match, then calls email check 
+  // Checks password values to ensure they match, then calls email check
   const handleUpdate = async (e) => {
     e.preventDefault();
     setState((prevState) => ({
@@ -147,7 +142,7 @@ export function UpdateUser(props) {
       return;
     }
     if (state.email !== props.email) {
-      if (! validator.isEmail(state.email)) {
+      if (!validator.isEmail(state.email)) {
         setState((prevState) => ({
           ...prevState,
           display: true,
@@ -186,11 +181,14 @@ export function UpdateUser(props) {
   const openSuperModal = (e) => {
     e.preventDefault();
     setIsOpen(true);
-  }
+  };
 
   return (
     <>
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}><p>Are you sure you want <br></br> to delete this profile?</p>
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+        <p>
+          Are you sure you want <br></br> to delete this profile?
+        </p>
         <Button
           onClick={sendDeleteRequest}
           id="btn"
@@ -203,93 +201,93 @@ export function UpdateUser(props) {
         </Button>
       </Modal>
       <h5>Update User</h5>
-        <div className="w-100 mx-auto" id="form">
-          <Form>
-            <Form.Group size="lg" controlId="firstName">
-              <Form.Control
-                type="text"
-                defaultValue={state.firstName}
-                placeholder={props.fName + " - required"}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-            <Form.Group size="lg" controlId="lastName">
-              <Form.Control
-                type="text"
-                defaultValue={state.lastName}
-                placeholder={props.lName + " - required"}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Control
-                as="select"
-                defaultValue={state.accountType}
-                onChange={handleSelect}
-              >
-                <option value={props.accountType}>{props.accountType}</option>
-                <option value={accountOption}>{accountOption}</option>
-                <option value={accountOptionTwo}>{accountOptionTwo}</option>
-              </Form.Control>
-            </Form.Group>
-            <Form.Group size="lg" controlId="email">
-              <Form.Control
-                type="email"
-                defaultValue={state.email}
-                placeholder={props.email + " - required"}
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-            <Form.Group size="lg" controlId="newPassword">
-              <Form.Text id="passwordHelpBlock" muted>
-                Leave blank to keep your current password.
-              </Form.Text>
-              <Form.Control
-                type="password"
-                defaultValue={state.newPassword}
-                placeholder="new password"
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Form.Group size="lg" controlId="confirmPassword">
-              <Form.Control
-                type="password"
-                defaultValue={state.confirmPassword}
-                placeholder="confirm password"
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Message
-              device="browser"
-              display={state.display}
-              type={state.type}
-              message={state.message}
+      <div className="w-100 mx-auto" id="form">
+        <Form>
+          <Form.Group size="lg" controlId="firstName">
+            <Form.Control
+              type="text"
+              defaultValue={state.firstName}
+              placeholder={props.fName + " - required"}
+              onChange={handleChange}
+              required
             />
-            <Button
-              onClick={handleUpdate}
-              id="btn"
-              variant="dark"
-              block
-              size="md"
-              type="submit"
+          </Form.Group>
+          <Form.Group size="lg" controlId="lastName">
+            <Form.Control
+              type="text"
+              defaultValue={state.lastName}
+              placeholder={props.lName + " - required"}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              as="select"
+              defaultValue={state.accountType}
+              onChange={handleSelect}
             >
-              UPDATE
-            </Button>
-            <Button
-              onClick={openSuperModal}
-              id="btn"
-              variant="danger"
-              block
-              size="md"
-              type="submit"
-            >
-              DELETE PROFILE
-            </Button>
-          </Form>
-        </div>
+              <option value={props.accountType}>{props.accountType}</option>
+              <option value={accountOption}>{accountOption}</option>
+              <option value={accountOptionTwo}>{accountOptionTwo}</option>
+            </Form.Control>
+          </Form.Group>
+          <Form.Group size="lg" controlId="email">
+            <Form.Control
+              type="email"
+              defaultValue={state.email}
+              placeholder={props.email + " - required"}
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group size="lg" controlId="newPassword">
+            <Form.Text id="passwordHelpBlock" muted>
+              Leave blank to keep your current password.
+            </Form.Text>
+            <Form.Control
+              type="password"
+              defaultValue={state.newPassword}
+              placeholder="new password"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group size="lg" controlId="confirmPassword">
+            <Form.Control
+              type="password"
+              defaultValue={state.confirmPassword}
+              placeholder="confirm password"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Message
+            device="browser"
+            display={state.display}
+            type={state.type}
+            message={state.message}
+          />
+          <Button
+            onClick={handleUpdate}
+            id="btn"
+            variant="dark"
+            block
+            size="md"
+            type="submit"
+          >
+            UPDATE
+          </Button>
+          <Button
+            onClick={openSuperModal}
+            id="btn"
+            variant="danger"
+            block
+            size="md"
+            type="submit"
+          >
+            DELETE PROFILE
+          </Button>
+        </Form>
+      </div>
     </>
   );
 }

@@ -8,13 +8,10 @@ import { AdminEstimates } from "./AdminEstimates";
 import { AdminNews } from "./AdminNews";
 import { AdminCategories } from "./AdminCategories";
 import { Card, Button, Image, Tabs, Tab } from "react-bootstrap";
-import { email } from "../LocalUser/LocalUser.js";
 import BlueSkyLogo from "../Images/topLogoBar.png";
-import { BrowserNavBar } from "../NavBar/BrowserNavBar.js";
+import { AdminNavBar } from "../NavBar/AdminNavBar.js";
 import { DeskFooter } from "../DeskFooter/DeskFooter.js";
 import { accountType } from "../LocalUser/LocalUser.js";
-
-// import "./Admin.css";
 
 // Provides admin console page
 export function Admin() {
@@ -53,7 +50,7 @@ export function Admin() {
   return (
     <>
       <BrowserView>
-        <BrowserNavBar />
+        <AdminNavBar />
         <Card className="border-0">
           <Card.Header
             className="d-flex justify-content-center align-items-center mb-1 border-0"
@@ -110,21 +107,11 @@ export function Admin() {
       </BrowserView>
 
       <MobileView>
-        <Image
-          src={BlueSkyLogo}
-          className="d-flex w-100 mx-auto justify-content-center"
-        />
-        <Card className="border-0" id="mcrd">
-          <Card.Header
-            className="d-flex justify-content-center align-items-center text-white"
-            id="mchead"
-          ></Card.Header>
+        <AdminNavBar />
 
-          <Card.Body id="mcbody">
-            <Card.Title className="mb-3" id="mctitle"></Card.Title>
-          </Card.Body>
-        </Card>
-        <MobileNavBar active="estimates" />
+        <p className="text-center text-white mt-3">
+          No Mobile Support for the Admin Page
+        </p>
       </MobileView>
     </>
   );
