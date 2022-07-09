@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -165,14 +165,14 @@ export function Services() {
 
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>BlueSky | Services</title>
         <meta
           name="BlueSky Home"
           content="Welcome to BlueSky App, we use this for testing"
         />
         <meta property="og:title" content="BlueSky Home" />
-      </MetaTags>
+      </Helmet>
 
       <BrowserView>
         <BrowserNavBar active="services" />

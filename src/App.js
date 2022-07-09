@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login } from "./Components/Login/Login";
 import SignUp from "./Components/SignUp/SignUp";
 import { Home } from "./Components/Home/Home";
@@ -17,21 +17,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/admin" component={Admin} />
-        <Route path="/moreMenu" component={MoreMenu} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/signUpSuccess" component={SignUpSuccess} />
-        <Route path="/thankYou" component={ThankYou} />
-        <Route path="/services" component={Services} />
-        <Route path="/estimates" component={Estimates} />
-        <Route path="/blueBucks" component={BlueBucks} />
-        <Route path="/home" component={Home} />
-        <Route path="/signUp">
-          <SignUp />
-        </Route>
-        <Route path="/" component={Login} />
-      </Switch>
+      <Routes>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/moreMenu" element={<MoreMenu />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/signUpSuccess" component={<SignUpSuccess />} />
+        <Route path="/thankYou" element={<ThankYou />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/estimates" element={<Estimates />} />
+        <Route path="/blueBucks" element={<BlueBucks />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/" element={<Login />} />
+      </Routes>
     </BrowserRouter>
   );
 }

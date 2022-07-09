@@ -5,6 +5,7 @@ import { Form, Image, Button } from "react-bootstrap";
 import LoginLogo from "../Images/loginLogo.png";
 import { API_BASE_URL, userExistsByEmail } from "../API/Api";
 import { withRouter } from "react-router-dom";
+import useReactRouter from "use-react-router";
 import validator from "validator";
 import { Message } from "../Message/Message";
 import "./SignUp.css";
@@ -226,7 +227,7 @@ function SignUp(props) {
               </Form>
             </div>
             <div className="mt-2 mb-5 w-50 mx-auto" id="form">
-              <Button href="/login" variant="secondary" block size="md">
+              <Button href="/" variant="secondary" block size="md">
                 LOGIN
               </Button>
             </div>
@@ -343,7 +344,7 @@ function SignUp(props) {
                 </Form>
               </div>
               <div className="mt-2 mb-3 w-75 mx-auto" id="sform">
-                <Button href="/login" variant="secondary" block size="md">
+                <Button href="/" variant="secondary" block size="md">
                   LOGIN
                 </Button>
               </div>
@@ -355,4 +356,4 @@ function SignUp(props) {
   );
 }
 
-export default withRouter(SignUp);
+export default SignUp;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 import { restrictPage, fetchCategories, postEstimate } from "../API/Api.js";
 import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
@@ -140,14 +140,14 @@ export function Estimates() {
 
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>BlueSky | Estimates</title>
         <meta
           name=" Home"
           content="Welcome to BlueSky App, we use this for testing"
         />
         <meta property="og:title" content="BlueSky Home" />
-      </MetaTags>
+      </Helmet>
 
       <BrowserView>
         <BrowserNavBar active="estimates" />

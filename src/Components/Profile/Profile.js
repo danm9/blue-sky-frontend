@@ -1,6 +1,6 @@
 // Author(s): Sam
 import React, { useState, useEffect } from "react";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 import {
   userExistsByEmail,
   fetchNews,
@@ -213,7 +213,7 @@ export function Profile() {
 
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>Blue Sky | Profile</title>
         <meta
           name="Blue Sky Profile"
@@ -221,7 +221,7 @@ export function Profile() {
         />
         <meta property="og:title" content="Blue Sky Profile" />
         <meta property="og:image" content="../Images/Header.png" />
-      </MetaTags>
+      </Helmet>
 
       <BrowserView>
         <BrowserNavBar active="profile" />

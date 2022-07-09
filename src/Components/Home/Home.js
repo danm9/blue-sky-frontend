@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -25,14 +25,14 @@ export function Home() {
 
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>BlueSky | Home</title>
         <meta
           name="BlueSky Home"
           content="Welcome to BlueSky App, we use this for testing"
         />
         <meta property="og:title" content="BlueSky Home" />
-      </MetaTags>
+      </Helmet>
 
       <BrowserView>
         <BrowserNavBar active="home" />
