@@ -4,7 +4,6 @@ describe("Login User", () => {
   it("Login Page Display", () => {
     // Login Page displayed correctly
     cy.visit("http://localhost:3000/");
-    cy.contains("SERVING CENTRAL FLORIDA");
     cy.contains("LOGIN");
     cy.get("button[data-testid=loginButton]").should("exist");
     cy.get("a[data-testid=signupButton]").should("exist");
@@ -79,7 +78,7 @@ describe("Basic Page Flow", () => {
   it("Blue Bucks Page", () => {
     // Testing the Blue Bucks Page
     cy.get("a[data-testid=blueBucksNav]").click();
-    cy.contains("Jane's Blue Bucks History");
+    cy.contains("Jane's BlueBucks History");
     cy.get("div[data-testid=currentBalance]").should("exist");
     cy.get("div[data-testid=referralBalance]").should("exist");
     cy.get("table[data-testid=blueBucksTable]").should("exist");
