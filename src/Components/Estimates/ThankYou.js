@@ -1,5 +1,5 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -13,7 +13,7 @@ import "./Estimates.css";
 export function ThankYou() {
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>Blue Sky | Thanks!</title>
         <meta
           name="Blue Sky Thanks"
@@ -21,7 +21,7 @@ export function ThankYou() {
         />
         <meta property="og:title" content="Blue Sky Thanks" />
         <meta property="og:image" content="../Images/Header.png" />
-      </MetaTags>
+      </Helmet>
 
       <BrowserView>
         <BrowserNavBar active="estimates" />

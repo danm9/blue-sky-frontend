@@ -226,7 +226,7 @@ function SignUp(props) {
               </Form>
             </div>
             <div className="mt-2 mb-5 w-50 mx-auto" id="form">
-              <Button href="/login" variant="secondary" block size="md">
+              <Button href="/" variant="secondary" block size="md">
                 LOGIN
               </Button>
             </div>
@@ -343,7 +343,7 @@ function SignUp(props) {
                 </Form>
               </div>
               <div className="mt-2 mb-3 w-75 mx-auto" id="sform">
-                <Button href="/login" variant="secondary" block size="md">
+                <Button href="/" variant="secondary" block size="md">
                   LOGIN
                 </Button>
               </div>

@@ -1,6 +1,6 @@
 // Authors: Dan, Sam
 import React, { useEffect } from "react";
-import MetaTags from "react-meta-tags";
+import Helmet from "react-helmet";
 import { MobileNavBar } from "../NavBar/MobileNavBar";
 import { BrowserNavBar } from "../NavBar/BrowserNavBar";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -62,7 +62,7 @@ export function BlueBucks() {
 
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>BlueSky | BlueBucks</title>
         <meta
           name="BlueSky Blue Bucks"
@@ -70,7 +70,7 @@ export function BlueBucks() {
         />
         <meta property="og:title" content="BlueSky Blue Bucks" />
         <meta property="og:image" content="../Images/Header.png" />
-      </MetaTags>
+      </Helmet>
 
       <BrowserView>
         <BrowserNavBar active="blueBucks" />
