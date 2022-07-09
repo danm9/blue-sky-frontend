@@ -5,7 +5,6 @@ import { Form, Image, Button } from "react-bootstrap";
 import LoginLogo from "../Images/loginLogo.png";
 import { API_BASE_URL, userExistsByEmail } from "../API/Api";
 import { withRouter } from "react-router-dom";
-import useReactRouter from "use-react-router";
 import validator from "validator";
 import { Message } from "../Message/Message";
 import "./SignUp.css";
@@ -356,4 +355,4 @@ function SignUp(props) {
   );
 }
 
-export default SignUp;
+export default withRouter(SignUp);
