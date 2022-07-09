@@ -4,10 +4,22 @@ import axios from "axios";
 import { Form, Image, Button } from "react-bootstrap";
 import LoginLogo from "../Images/loginLogo.png";
 import { API_BASE_URL, userExistsByEmail } from "../API/Api";
-import { withRouter } from "react-router-dom";
+// import { withRouter } from "react-router-dom";
 import validator from "validator";
 import { Message } from "../Message/Message";
 import "./SignUp.css";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+
+function withRouter(Component) {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return <Component {...props} router={{ location, navigate, params }} />;
+  }
+
+  return ComponentWithRouterProp;
+}
 
 // Provides the signup page
 function SignUp(props) {
