@@ -159,17 +159,17 @@ export function Estimates() {
             {fName}'s Estimate
           </Card.Header>
 
-          <Card.Body className="mx-auto" id="bcbody">
+          <Card.Body className="mx-auto mb-2" id="bcbody">
             <Card.Title className="mb-3 text-center" id="bctitle">
               <strong>{accountType}</strong> Services
             </Card.Title>
             <Form className="align-content-center">
-              <div className="d-block text-center">
+              <div className="d-block">
                 <div className="d-inline-block text-left w-100">
                   {categoryTable}
                 </div>
               </div>
-              <div style={{ width: "200px" }}>{textField}</div>
+              <div style={{ width: "275px" }}>{textField}</div>
               <div className="mx-auto" style={{ maxWidth: "200px" }}>
                 <Message
                   device="browser"

@@ -53,7 +53,7 @@ export function Home() {
             <div className="d-flex justify-content-center" id="buttons">
               <div className="mx-auto">
                 <Button
-                  className="p-2 mr-2"
+                  className="p-2"
                   id="btn"
                   variant="dark"
                   href="/estimates"
@@ -62,7 +62,7 @@ export function Home() {
                   REQUEST A QUOTE
                 </Button>
                 <Button
-                  className="p-2 mr-2"
+                  className="p-2"
                   id="btn"
                   variant="dark"
                   href="/services"

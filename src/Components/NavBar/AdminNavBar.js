@@ -24,12 +24,7 @@ export function AdminNavBar(props) {
       </div>
       <Navbar id="bckgnd">
         <Nav className="mx-auto">
-          <Nav.Link
-            href="/login"
-            id="wfnt"
-            data-testid="logoutNav"
-            onClick={logOut}
-          >
+          <Nav.Link href="/" id="wfnt" data-testid="logoutNav" onClick={logOut}>
             Logout
           </Nav.Link>
         </Nav>

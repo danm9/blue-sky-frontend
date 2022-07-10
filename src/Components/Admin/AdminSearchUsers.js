@@ -8,7 +8,7 @@ import "./Admin.css";
 
 // Provides search user tab content for admin console
 export function AdminSearchUsers() {
-  const [token] = useState(sessionStorage.getItem('token') || '');
+  const [token] = useState(sessionStorage.getItem("token") || "");
   const [users, setUsers] = useState([]);
   const [userSearch, setUserSearch] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,7 @@ export function AdminSearchUsers() {
 
   const refreshData = () => {
     fetchUsers(token).then(setUsers);
-  }
+  };
 
   // Get values for user form from <td> elements in row
   const getUserValues = (ui, fn, ln, at, em) => {
@@ -87,7 +87,8 @@ export function AdminSearchUsers() {
         filterItems(
           users[i].firstName.toLowerCase() +
             " " +
-            users[i].lastName.toLowerCase(), inputValue
+            users[i].lastName.toLowerCase(),
+          inputValue
         )
       ) {
         // Services/Invoices Info
@@ -137,12 +138,24 @@ export function AdminSearchUsers() {
 
         searchResults.push(
           <tr id={[i]}>
-            <td key={[i] + 0 + "d"} id={[i] + 0 + "d"}>{users[i].firstName}</td>
-            <td key={[i] + 1 + "d"} id={[i] + 1 + "d"}>{users[i].lastName}</td>
-            <td key={[i] + 2 + "d"} id={[i] + 2 + "d"}>{users[i].email}</td>
-            <td key={[i] + 3 + "d"} id={[i] + 3 + "d"}>{users[i].accountType}</td>
-            <td key={[i] + 4 + "d"} id={[i] + 4 + "d"}>{updatedServices}</td>
-            <td key={[i] + 5 + "d"} id={[i] + 5 + "d"}>{updatedBlueBucks}</td>
+            <td key={[i] + 0 + "d"} id={[i] + 0 + "d"}>
+              {users[i].firstName}
+            </td>
+            <td key={[i] + 1 + "d"} id={[i] + 1 + "d"}>
+              {users[i].lastName}
+            </td>
+            <td key={[i] + 2 + "d"} id={[i] + 2 + "d"}>
+              {users[i].email}
+            </td>
+            <td key={[i] + 3 + "d"} id={[i] + 3 + "d"}>
+              {users[i].accountType}
+            </td>
+            <td key={[i] + 4 + "d"} id={[i] + 4 + "d"}>
+              {updatedServices}
+            </td>
+            <td key={[i] + 5 + "d"} id={[i] + 5 + "d"}>
+              {updatedBlueBucks}
+            </td>
             <td>
               <Button
                 id={[i] + "b"}
@@ -179,10 +192,14 @@ export function AdminSearchUsers() {
     setUserSearch(searchResults);
   };
 
-
   return (
     <>
-      <Modal tab="users" search={onSearch} open={isOpen} onClose={() => setIsOpen(false)}>
+      <Modal
+        tab="users"
+        search={onSearch}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
         <UpdateUser
           refreshData={refreshData}
           userId={userState.userId}
@@ -222,7 +239,7 @@ export function AdminSearchUsers() {
         id="searchResults"
       >
         <thead>
-          <tr>
+          <tr className="table-dark">
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>

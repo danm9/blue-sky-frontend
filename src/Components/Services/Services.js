@@ -193,7 +193,7 @@ export function Services() {
                 size="sm"
                 data-testid="servicesTable"
               >
-                <thead>
+                <thead className="table-dark">
                   <tr>
                     <th>Date</th>
                     <th>Amount</th>

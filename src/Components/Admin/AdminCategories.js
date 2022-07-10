@@ -8,7 +8,7 @@ import { UpdateCategories } from "../Forms/UpdateCategories.js";
 
 // Provides categories tab content for admin console
 export function AdminCategories() {
-  const [token] = useState(sessionStorage.getItem('token') || '');
+  const [token] = useState(sessionStorage.getItem("token") || "");
   const [categories, setCategories] = useState([]);
   const [categoriesTable, setcategoriesTable] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ export function AdminCategories() {
       categoriesArray.push(
         <>
           <thead>
-            <tr>
+            <tr className="table-dark">
               <th>{categories[i].customerType}</th>
             </tr>
           </thead>
@@ -41,20 +41,18 @@ export function AdminCategories() {
         </>
       );
     }
-    setcategoriesTable(categoriesArray)
-  }, [categories])
+    setcategoriesTable(categoriesArray);
+  }, [categories]);
 
   // Performs another fetch when called to refresh the table data on page
   const refreshData = () => {
-    fetchCategories(token).then(setCategories); 
-  }
+    fetchCategories(token).then(setCategories);
+  };
 
   return (
     <div>
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-
-        <UpdateCategories categories={categories} refreshData={refreshData}/>
-        
+        <UpdateCategories categories={categories} refreshData={refreshData} />
       </Modal>
       <Table striped bordered hover size="sm" className="mx-auto w-25">
         {categoriesTable}
