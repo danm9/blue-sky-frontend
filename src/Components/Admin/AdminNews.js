@@ -8,7 +8,7 @@ import "./Admin.css";
 
 // Provides news tab content for admin console
 export function AdminNews() {
-  const [token] = useState(sessionStorage.getItem('token') || '');
+  const [token] = useState(sessionStorage.getItem("token") || "");
   const [news, setNews] = useState([]);
   const [newsTable, setNewsTable] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -23,28 +23,40 @@ export function AdminNews() {
     for (let i in news) {
       newsInputs.push(
         <tr id="tableFont">
-          <td key={news[i].customerType} className="align-self-center">{news[i].customerType}</td>
-          <td key={`${news[i].customerType} headline`} className="align-self-center">{news[i].headline}</td>
-          <td key={`${news[i].customerType} text`} className="align-self-center">{news[i].text}</td>
+          <td key={news[i].customerType} className="align-self-center">
+            {news[i].customerType}
+          </td>
+          <td
+            key={`${news[i].customerType} headline`}
+            className="align-self-center"
+          >
+            {news[i].headline}
+          </td>
+          <td
+            key={`${news[i].customerType} text`}
+            className="align-self-center"
+          >
+            {news[i].text}
+          </td>
         </tr>
       );
     }
-    setNewsTable(newsInputs)
-  }, [news])
+    setNewsTable(newsInputs);
+  }, [news]);
 
   const refreshData = () => {
-    fetchNews(token).then(setNews); 
-    console.log("refreshed")
-  }
+    fetchNews(token).then(setNews);
+    console.log("refreshed");
+  };
 
   return (
     <div>
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        <UpdateNews news={news} refreshData={refreshData}/>
+        <UpdateNews news={news} refreshData={refreshData} />
       </Modal>
       <Table striped bordered hover size="sm">
         <thead>
-          <tr>
+          <tr className="table-dark">
             <th>AccountType</th>
             <th>Headline</th>
             <th>Text</th>

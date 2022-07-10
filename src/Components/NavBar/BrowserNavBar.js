@@ -98,12 +98,7 @@ export function BrowserNavBar(props) {
           >
             Profile
           </Nav.Link>
-          <Nav.Link
-            href="/login"
-            id="wfnt"
-            data-testid="logoutNav"
-            onClick={logOut}
-          >
+          <Nav.Link href="/" id="wfnt" data-testid="logoutNav" onClick={logOut}>
             Logout
           </Nav.Link>
         </Nav>

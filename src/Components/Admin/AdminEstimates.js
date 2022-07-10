@@ -6,7 +6,7 @@ import "./Admin.css";
 
 // Provides estimates tab content for admin console
 export function AdminEstimates() {
-  const [token] = useState(sessionStorage.getItem('token') || '');
+  const [token] = useState(sessionStorage.getItem("token") || "");
   const [estimates, setEstimates] = useState([]);
 
   // This fetches the Estimates data from Db
@@ -53,7 +53,7 @@ export function AdminEstimates() {
   return (
     <Table striped bordered hover size="sm">
       <thead>
-        <tr>
+        <tr className="table-dark">
           <th>Date Submitted</th>
           <th>Email</th>
           <th>First Name</th>

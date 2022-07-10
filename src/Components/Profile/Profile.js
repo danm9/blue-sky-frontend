@@ -234,9 +234,9 @@ export function Profile() {
           </Card.Header>
 
           <Card.Body className="mx-auto w-50" id="bcbody">
-            <div className="w-50 mx-auto" id="form">
+            <div className="mx-auto" id="form">
               <Form>
-                <Form.Group size="lg" controlId="firstName">
+                <Form.Group size="lg" controlId="firstName" className="mb-2">
                   <Form.Control
                     type="text"
                     data-testid="firstName"
@@ -246,7 +246,7 @@ export function Profile() {
                     required
                   />
                 </Form.Group>
-                <Form.Group size="lg" controlId="lastName">
+                <Form.Group size="lg" controlId="lastName" className="mb-2">
                   <Form.Control
                     type="text"
                     data-testid="lastName"
@@ -256,7 +256,7 @@ export function Profile() {
                     required
                   />
                 </Form.Group>
-                <Form.Group>
+                <Form.Group className="mb-2">
                   <Form.Control
                     as="select"
                     data-testid="customerType"
@@ -267,7 +267,7 @@ export function Profile() {
                     <option value={accountOption}>{accountOption}</option>
                   </Form.Control>
                 </Form.Group>
-                <Form.Group size="lg" controlId="email">
+                <Form.Group size="lg" controlId="email" className="mb-2">
                   <Form.Control
                     type="email"
                     data-testid="email"
@@ -277,8 +277,8 @@ export function Profile() {
                     required
                   />
                 </Form.Group>
-                <Form.Group size="lg" controlId="newPassword">
-                  <Form.Text id="passwordHelpBlock" muted>
+                <Form.Group size="lg" controlId="newPassword" className="mb-2">
+                  <Form.Text id="passwordHelpBlock" muted className="mb-2">
                     Leave blank to keep your current password.
                   </Form.Text>
                   <Form.Control
@@ -289,7 +289,11 @@ export function Profile() {
                     onChange={handleChange}
                   />
                 </Form.Group>
-                <Form.Group size="lg" controlId="confirmPassword">
+                <Form.Group
+                  size="lg"
+                  controlId="confirmPassword"
+                  className="mb-2"
+                >
                   <Form.Control
                     type="password"
                     data-testid="confirmPassword"

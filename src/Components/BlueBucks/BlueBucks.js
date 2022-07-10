@@ -98,7 +98,7 @@ export function BlueBucks() {
                 size="sm"
                 data-testid="blueBucksTable"
               >
-                <thead>
+                <thead className="table-dark">
                   <tr>
                     <th>Transaction Type</th>
                     <th>Amount</th>
