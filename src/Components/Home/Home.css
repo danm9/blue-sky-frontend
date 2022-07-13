@@ -26,6 +26,7 @@
     font-size: 16px;
     font-weight: bold;
     box-shadow: 0px 0px 6px #006666;
+    margin-right: 1rem;
   }
 
   #btn:active {
